@@ -1,7 +1,14 @@
-# Return the number of test failures from the last CDash submission.
+# Return the number of test failures from the last CDash submission from argv host.
 import sys
 import json
+import sys
 
+v = sys.argv
+
+if len(v) != 2:
+    print('cdash.py hostname')
+    sys.exit(1)
+    
 json_file = 'out.json'
 try:
     with open(json_file) as data_file:
@@ -14,7 +21,15 @@ except IOError:
     print('ERROR:cannot open '+json_file)
     sys.exit(1)
 
-# Pick the last one.
-# sys.exit(data['buildgroups'][0]['builds'][-1]['test']['fail'])
-print(data['buildgroups'][0]['builds'][-1]['test']['fail'])
+n = len(data['buildgroups'][0]['builds'])
+b = data['buildgroups'][0]['builds']
 
+# Print the number of CTest failures of hostname argument.
+found = False
+for i in range(0, n):
+    if b[i]['site'] == v[1]:
+        found = True
+        print(b[i]['test']['fail'])
+
+if not found:
+    sys.exit(1)
