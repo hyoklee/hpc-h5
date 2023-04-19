@@ -15,6 +15,9 @@ if [ $rc_h5 -eq 1 ]
    # Submit a parallel job for testing.
    cd /home/hyoklee/src/hpc-h5/bin
    qsub j_po.pbs
+   sleep 1200
+   cd /lus/grand/projects/CSC250STDM10/hyoklee/hdf5/build
+   ctest -T Submit
 fi
 
 
