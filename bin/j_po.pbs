@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#PBS -l select=1:system=polaris,place=scatter
+#PBS -A CSC250STDM10
+#PBS -l walltime=00:10:00
+#PBS -l filesystems=home
+#PBS -N HDF5
+#PBS -k doe
+#PBS -q debug
+
+module load e4s/22.08
+module load cmake
+
+export CXX=gcc
+
+cd /home/hyoklee/hdf5_polaris/build
+/home/hyoklee/bin/ctsub
+
