@@ -1,4 +1,5 @@
 #!/usr/bin/bash
-./ctbt
+ctest -T Build
+ctest -T Test
 ctest -T Submit
 
