@@ -1,4 +1,5 @@
-# Return the number of test failures from the last CDash submission from argv host.
+# Return the number of CTest failures from the last CDash submission
+# from a given host name.
 import sys
 import json
 import sys
