@@ -1,8 +1,6 @@
 #!/bin/bash
 
-## PBS -l select=32:system=sunspot,place=scatter
-## Select 1 for debug
-#PBS -l select=1:system=sunspot,place=scatter
+#PBS -l select=6:system=sunspot,place=scatter
 #PBS -A CSC250STDM12_CNDA 
 #PBS -l walltime=00:30:00
 #PBS -N HDF5
