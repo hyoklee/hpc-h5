@@ -27,8 +27,8 @@ b = data['buildgroups'][0]['builds']
 
 # Print the number of CTest failures of hostname argument.
 found = False
-for i in range(0, n):
-    if b[i]['site'] == v[1]:
+for i in reversed(range(0, n)):
+    if (b[i]['site'] == v[1] and not found):
         found = True
         print(b[i]['test']['fail'])
 
