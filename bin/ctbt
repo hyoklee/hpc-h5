@@ -1,5 +1,6 @@
 #!/usr/bin/bash
-ctest -T Build
-ctest -T Test --output-on-error -j 6
+ctest -T Build --output-on-error -j
+ctest -T Test --output-on-error -j
+
 
 
