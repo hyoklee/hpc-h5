@@ -8,7 +8,7 @@
 #SBATCH -J h5
 #SBATCH -o %x-%j.out
 #SBATCH -t 00:20:00
-#SBATCH -N 1
+#SBATCH -N 2
 #SBATCH -S 0
 #SBATCH --ntasks-per-node=64
 #SBATCH -p batch
