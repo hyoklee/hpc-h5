@@ -4,6 +4,7 @@
 
 echo "Hello" > /home/hyoklee/bin/hello_polaris.txt
 module load e4s/22.08
+module load cmake
 
 cd /lus/grand/projects/CSC250STDM10/hyoklee/hdf5
 /home/hyoklee/bin/ckrev
