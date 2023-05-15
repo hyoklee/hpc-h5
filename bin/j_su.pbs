@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -l select=6:system=sunspot,place=scatter
+#PBS -l select=2:system=sunspot,place=scatter
 #PBS -A CSC250STDM12_CNDA 
 #PBS -l walltime=00:30:00
 #PBS -N HDF5
@@ -40,6 +40,7 @@ echo "OMP_PROC_BIND=$OMP_PROC_BIND OMP_PLACES=$OMP_PLACES"
 module load daos/base
 module load spack
 module load cmake
+module load mpich/52.2
 
 cd /lus/gila/projects/CSC250STDM10_CNDA/hyoklee/hdf5/build
 /home/hyoklee/src/hpc-h5/bin/ctsub
