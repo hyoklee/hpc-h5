@@ -2,7 +2,7 @@
 
 #PBS -l select=2:system=sunspot,place=scatter
 #PBS -A CSC250STDM12_CNDA 
-#PBS -l walltime=00:30:00
+#PBS -l walltime=00:60:00
 #PBS -N HDF5
 #PBS -k doe
 #PBS -q workq
