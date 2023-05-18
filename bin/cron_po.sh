@@ -5,8 +5,8 @@
 echo "Hello" > /home/hyoklee/bin/hello_polaris.txt
 module load e4s/22.08
 module load cmake
-
-cd /lus/grand/projects/CSC250STDM10/hyoklee/hdf5
+d="/lus/grand/projects/CSC250STDM10/hyoklee/hdf5"
+cd $d
 /home/hyoklee/bin/ckrev
 rc_h5=$?
 
@@ -15,8 +15,7 @@ then
    # Submit a parallel job for testing.
    cd /home/hyoklee/src/hpc-h5/bin
    qsub j_po.pbs
-   sleep 2400
-   cd /lus/grand/projects/CSC250STDM10/hyoklee/hdf5/build && ctest -T Submit
+   sleep 60m && cd $d/build && ctest -T Submit
 fi
 
 # To measure time
