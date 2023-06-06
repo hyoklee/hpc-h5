@@ -12,10 +12,15 @@ rc_h5=$?
 
 if [ $rc_h5 -eq 1 ]
 then   
-   # Submit a parallel job for testing.
-   cd /home/hyoklee/src/hpc-h5/bin
-   qsub j_po.pbs
-   sleep 60m && cd $d/build && ctest -T Submit
+    # Submit a parallel job for testing.
+    rm -rf $d/build
+    mkdir $d/build
+    cd $d/build
+    /home/hyoklee/src/hpc-h5/bin/cmake.sh
+    ctest -T Build --output-on-error -j
+    cd /home/hyoklee/src/hpc-h5/bin
+    qsub j_po.pbs
+    sleep 60m && cd $d/build && ctest -T Submit
 fi
 
 # To measure time

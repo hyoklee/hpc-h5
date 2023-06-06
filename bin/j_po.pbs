@@ -14,7 +14,7 @@ module load cmake
 export CXX=gcc
 
 cd /lus/grand/projects/CSC250STDM10/hyoklee/hdf5/build
-/home/hyoklee/src/hpc-h5/bin/ctbt
+/home/hyoklee/src/hpc-h5/bin/ctt
 
 
 
