@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -l select=2:system=sunspot,place=scatter
+#PBS -l select=6:system=sunspot,place=scatter
 #PBS -A CSC250STDM12_CNDA 
 #PBS -l walltime=00:60:00
 #PBS -N HDF5
@@ -22,13 +22,13 @@ echo Running on nodes `cat $PBS_NODEFILE`
 NNODES=`wc -l < $PBS_NODEFILE`
 
 # Number of MPI ranks per node
-# NRANKS=12
-NRANKS=2
+NRANKS=12
+# NRANKS=2
 
 
 # Number of hardware threads per rank, spacing between MPI ranks on a node
-# NDEPTH=16
-NDEPTH=2
+NDEPTH=16
+# NDEPTH=2
 
 # Number of OMP threads per rank, given to OMP_NUM_THREADS
 NTHREADS=$OMP_NUM_THREADS 
@@ -43,5 +43,5 @@ module load cmake
 module load mpich/52.2
 
 cd /lus/gila/projects/CSC250STDM10_CNDA/hyoklee/hdf5/build
-/home/hyoklee/src/hpc-h5/bin/ctsub
+/home/hyoklee/src/hpc-h5/bin/ctts
 

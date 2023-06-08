@@ -1,10 +1,8 @@
 #!/bin/bash
 
-## PBS -l select=32:system=sunspot,place=scatter
-## Select 1 for debug
-#PBS -l select=1:system=sunspot,place=scatter
+#PBS -l select=2:system=sunspot,place=scatter
 #PBS -A CSC250STDM12_CNDA 
-#PBS -l walltime=00:06:00
+#PBS -l walltime=00:60:00
 #PBS -N HDF5
 #PBS -k doe
 #PBS -q workq
@@ -42,11 +40,8 @@ echo "OMP_PROC_BIND=$OMP_PROC_BIND OMP_PLACES=$OMP_PLACES"
 module load daos/base
 module load spack
 module load cmake
+module load mpich/52.2
 
 cd /lus/gila/projects/CSC250STDM10_CNDA/hyoklee/hdf5/build
-# ctest -V  -I 110,110
-# /opt/cray/pe/pals/1.2.9/bin/mpiexec "-n" "50" "/lus/gila/projects/CSC250STDM10_CNDA/hyoklee/hdf5/build/bin/testphdf5" "-x" "cchunk1" "-x" "cchunk2" "-x" "cchunk3" "-x" "cchunk4" "-x" "ecdsetw" "-x" "eidsetw2" "-x" "selnone" "-x" "cngrpw-ingrpr" "-x" "cschunkw" "-x" "ccchunkw" "-x" "tldsc" "-x" "actualio" "-x" "MC_coll_MD_read"
-# mpirun -n <NP> xterm -hold -e gdb -ex run --args ./program [arg1] [arg2] [...]
-# /opt/cray/pe/pals/1.2.9/bin/mpiexec "-n" "50" gdb-oneapi -ex run --args "/lus/gila/projects/CSC250STDM10_CNDA/hyoklee/hdf5/build/bin/testphdf5" "-x" "cchunk1" "-x" "cchunk2" "-x" "cchunk3" "-x" "cchunk4" "-x" "ecdsetw" "-x" "eidsetw2" "-x" "selnone" "-x" "cngrpw-ingrpr" "-x" "cschunkw" "-x" "ccchunkw" "-x" "tldsc" "-x" "actualio" "-x" "MC_coll_MD_read"
-/opt/cray/pe/pals/1.2.9/bin/mpiexec "-n" "2" gdb-oneapi -ex run --args "/lus/gila/projects/CSC250STDM10_CNDA/hyoklee/hdf5/build/bin/testphdf5" "-x" "cchunk1"
+/home/hyoklee/src/hpc-h5/bin/ctsub
 
