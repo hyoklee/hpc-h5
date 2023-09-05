@@ -8,11 +8,10 @@ module load cmake
 d="/lus/grand/projects/CSC250STDM10/hyoklee/hdf5"
 cd $d
 /home/hyoklee/bin/ckrev
-rc_h5=$?
-
+# rc_h5=$?
+rc_h5=1
 if [ $rc_h5 -eq 1 ]
 then   
-    # Submit a parallel job for testing.
     rm -rf $d/build
     mkdir $d/build
     cd $d/build
@@ -22,6 +21,4 @@ then
     qsub j_po.pbs
     sleep 60m && cd $d/build && ctest -T Submit
 fi
-
-# To measure time
 echo "Hello2" > /home/hyoklee/bin/hello2_polaris.txt
