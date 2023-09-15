@@ -21,5 +21,5 @@ then
 fi
 
 # To measure time
-echo "Hello2" > /home/hyoklee/bin/hello2.txt
+echo "Hello2" > /global/homes/h/hyoklee/bin/hello2.txt
 cd /pscratch/sd/h/hyoklee/hdf5/build && ctest -T Submit
