@@ -17,7 +17,7 @@ then
    mkdir $d/build
    cd $d/build
    /global/homes/h/hyoklee/src/hpc-h5/bin/cmake_nv_pe.sh
-   sbatch j_pe.slurm
+   sbatch /global/homes/h/hyoklee/src/hpc-h5/bin/j_pe.slurm
 fi
 
 # To measure time
