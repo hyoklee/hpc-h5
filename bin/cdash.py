@@ -6,8 +6,8 @@ import sys
 
 v = sys.argv
 
-if len(v) != 2:
-    print('cdash.py hostname')
+if len(v) != 3:
+    print('cdash.py hostname buildname')
     sys.exit(1)
     
 json_file = 'out.json'
@@ -28,7 +28,7 @@ b = data['buildgroups'][0]['builds']
 # Print the number of CTest failures of hostname argument.
 found = False
 for i in reversed(range(0, n)):
-    if (b[i]['site'] == v[1] and not found):
+    if (b[i]['site'] == v[1] and b[i]['buildname'] == v[2] and not found):
         found = True
         print(b[i]['test']['fail'])
 

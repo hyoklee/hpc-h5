@@ -12,7 +12,7 @@ jobs:
     - name: cURL request
       run: curl -s -o out.json 'https://my.cdash.org/api/v1/index.php?project=HDF5'
     - id: date
-      run: echo "##[set-output name=data;]$(python ./bin/cdash.py frontier)"
+      run: echo "##[set-output name=data;]$(python ./bin/cdash.py frontier 1.15.0-PrgEnv-gnu\/8.3.3--gcc\/12.2.0-frontier----)"
     - name: Time badge
       uses: RubbaBoy/BYOB@v1.3.0
       with:

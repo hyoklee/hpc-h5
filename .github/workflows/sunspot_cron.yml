@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout hpc-h5
-      uses: actions/checkout@v3    
+      uses: actions/checkout@v4
     - name: cURL request
       run: curl -s -o out.json 'https://my.cdash.org/api/v1/index.php?project=HDF5'
     - id: date
-      run: echo "##[set-output name=data;]$(python ./bin/cdash.py uan-0001)"
+      run: echo "##[set-output name=data;]$(python ./bin/cdash.py uan-0001 Linux-mpicc)"
 
     - name: Upload
       uses: actions/upload-artifact@v2
