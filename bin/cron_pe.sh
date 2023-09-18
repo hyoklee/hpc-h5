@@ -10,7 +10,7 @@ d="/pscratch/sd/h/hyoklee/hdf5"
 cd $d
 /global/homes/h/hyoklee/src/hpc-h5/bin/ckrev
 rc_h5=$?
-
+rc_h5=1
 if [ $rc_h5 -eq 1 ]
 then
    rm -rf $d/build
@@ -18,8 +18,9 @@ then
    cd $d/build
    /global/homes/h/hyoklee/src/hpc-h5/bin/cmake_nv_pe.sh
    sbatch /global/homes/h/hyoklee/src/hpc-h5/bin/j_pe.slurm
+   cd /pscratch/sd/h/hyoklee/hdf5/build && ctest -T Submit
 fi
 
 # To measure time
 echo "Hello2" > /global/homes/h/hyoklee/bin/hello2.txt
-cd /pscratch/sd/h/hyoklee/hdf5/build && ctest -T Submit
+

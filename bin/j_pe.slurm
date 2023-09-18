@@ -13,4 +13,4 @@
 #SBATCH -N 6
 #SBATCH --ntasks-per-node=6
 
-srun -N1 -n1 ./j_pe.sh
+srun -N1 -n1 /global/homes/h/hyoklee/src/hpc-h5/bin/j_pe.sh
