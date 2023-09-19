@@ -2,7 +2,7 @@ name: polaris cron
 
 on:
   schedule:
-    - cron: '25 5 * * *'
+    - cron: '25 3 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
