@@ -5,12 +5,16 @@
 
 echo "Hello" > /home/hyoklee/bin/hello.txt
 module load daos/base
+module load spack
+module load cmake
+which cmake
+module load mpich/52.2
 
 d="/lus/gila/projects/CSC250STDM10_CNDA/hyoklee/hdf5"
 cd $d
 /home/hyoklee/bin/ckrev
-rc_h5=$?
-
+# rc_h5=$?
+rc_h5=1
 if [ $rc_h5 -eq 1 ]
 then
    rm -rf $d/build
