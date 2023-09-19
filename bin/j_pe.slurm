@@ -2,14 +2,14 @@
 ##
 ## Usage: sbatch j_pe.slurm
 ## Author: Hyokyung Lee (hyoklee@hdfgroup.org)
-## Last Update: 2023-09-14
+## Last Update: 2023-09-19
 ##
 #SBATCH -A m2621
 #SBATCH -C cpu
-#SBATCH -q debug
+#SBATCH -q regular
 #SBATCH -J h5
 #SBATCH -o %x-%j.out
-#SBATCH -t 00:30:00
+#SBATCH -t 01:00:00
 #SBATCH -N 6
 #SBATCH --ntasks-per-node=6
 

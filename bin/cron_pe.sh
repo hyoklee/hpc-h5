@@ -18,7 +18,6 @@ then
    cd $d/build
    /global/homes/h/hyoklee/src/hpc-h5/bin/cmake_nv_pe.sh
    sbatch /global/homes/h/hyoklee/src/hpc-h5/bin/j_pe.slurm
-   sleep 32m && cd /pscratch/sd/h/hyoklee/hdf5/build && ctest -T Submit
 fi
 
 # To measure time
