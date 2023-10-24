@@ -2,7 +2,7 @@
 ##
 ## Usage: sbatch j_fr.slurm
 ## Author: Hyokyung Lee (hyoklee@hdfgroup.org)
-## Last Update: 2023-04-28
+## Last Update: 2023-10-24
 ##
 #SBATCH -A CSC444
 #SBATCH -J h5
@@ -22,4 +22,4 @@
 
 # export HDF5_USE_FILE_LOCKING=FALSE
 
-srun -N1 -n1 ./j_fr.sh
+srun -N1 -n1 /ccs/home/hyoklee/src/hpc-h5/bin/j_fr.sh
