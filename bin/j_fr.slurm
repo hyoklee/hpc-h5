@@ -2,13 +2,13 @@
 ##
 ## Usage: sbatch j_fr.slurm
 ## Author: Hyokyung Lee (hyoklee@hdfgroup.org)
-## Last Update: 2023-04-20
+## Last Update: 2023-04-28
 ##
 #SBATCH -A CSC444
 #SBATCH -J h5
 #SBATCH -o %x-%j.out
-#SBATCH -t 00:20:00
-#SBATCH -N 2
+#SBATCH -t 01:00:00
+#SBATCH -N 1
 #SBATCH -S 0
 #SBATCH --ntasks-per-node=64
 #SBATCH -p batch
@@ -20,6 +20,6 @@
 #export romio_ds_write=enable
 #export cb_buffer_size=16777216
 
-export HDF5_USE_FILE_LOCKING=FALSE
+# export HDF5_USE_FILE_LOCKING=FALSE
 
 srun -N1 -n1 ./j_fr.sh
