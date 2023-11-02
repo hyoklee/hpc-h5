@@ -15,7 +15,7 @@ jobs:
       run: echo "##[set-output name=data;]$(python ./bin/cdash.py uan-0001 Linux-mpicc)"
 
     - name: Upload
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: out.json
         path: ${{ runner.workspace }}/hpc-h5/out.json
