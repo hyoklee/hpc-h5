@@ -23,6 +23,6 @@ cmake \
     -D SITE:STRING=frontier \
     ..
 sbatch /ccs/home/hyoklee/src/hpc-h5/bin/j_fr.slurm
-sleep 1200
+sleep 7200
 ctest -T Submit
 echo "Hello2" > /ccs/home/hyoklee/tmp/hello2.txt
