@@ -19,6 +19,6 @@ then
     ctest -T Build --output-on-error -j
     cd /home/hyoklee/src/hpc-h5/bin
     qsub j_po.pbs
-    sleep 60m && cd $d/build && ctest -T Submit
+    sleep 120m && cd $d/build && ctest -T Submit
 fi
 echo "Hello2" > /home/hyoklee/bin/hello2_polaris.txt
