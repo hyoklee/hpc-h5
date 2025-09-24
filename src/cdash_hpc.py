@@ -391,21 +391,23 @@ Generated on: {timestamp}
 
 ## Build Results
 
-| Version | MPI | Compiler | OS | Configure | Build | Tests | Pass Rate |
-|---------|-----|----------|----|-----------| ------|-------|-----------|
+| Site | Version | OS | MPI | Compiler | Configure | Build | Tests | Pass Rate |
+|------|---------|----|----|----------|-----------|-------|-------|-----------|
 """
 
         for _, row in df.iterrows():
+            site = row.get('site', 'unknown')
             version = row.get('version', 'unknown')
+            os_info = row.get('os', 'unknown')
             mpi = row.get('mpi', 'unknown')
             compiler = row.get('compiler', 'unknown')
-            os_info = row.get('os', 'unknown')
 
             # Truncate long fields for better table formatting
+            site = site[:15] + "..." if len(site) > 15 else site
             version = version[:15] + "..." if len(version) > 15 else version
+            os_info = os_info[:20] + "..." if len(os_info) > 20 else os_info
             mpi = mpi[:12] + "..." if len(mpi) > 12 else mpi
             compiler = compiler[:15] + "..." if len(compiler) > 15 else compiler
-            os_info = os_info[:20] + "..." if len(os_info) > 20 else os_info
 
             configure_status = "✅" if row['configure_errors'] == 0 else f"❌({row['configure_errors']})"
             build_status = "✅" if row['build_errors'] == 0 else f"❌({row['build_errors']})"
@@ -414,7 +416,7 @@ Generated on: {timestamp}
             site_pass_rate = (row['test_passed'] / total_site_tests * 100) if total_site_tests > 0 else 0
             test_summary = f"{row['test_passed']}/{total_site_tests}"
 
-            report += f"| {version} | {mpi} | {compiler} | {os_info} | {configure_status} | {build_status} | {test_summary} | {site_pass_rate:.1f}% |\n"
+            report += f"| {site} | {version} | {os_info} | {mpi} | {compiler} | {configure_status} | {build_status} | {test_summary} | {site_pass_rate:.1f}% |\n"
 
         # Add detailed statistics
         report += f"""
