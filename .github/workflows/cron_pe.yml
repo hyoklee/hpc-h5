@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout hpc-h5
-      uses: actions/checkout@v3    
+      uses: actions/checkout@v4    
     - name: cURL request
       run: curl -s -o out.json 'https://my.cdash.org/api/v1/index.php?project=HDF5'
     - id: date
@@ -24,7 +24,7 @@ jobs:
         REPOSITORY: hyoklee/hpc-h5
         ACTOR: hyoklee
     - name: Upload
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: out.json
         path: ${{ runner.workspace }}/hpc-h5/out.json

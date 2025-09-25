@@ -24,7 +24,7 @@ jobs:
         REPOSITORY: hyoklee/hpc-h5
         ACTOR: hyoklee
     - name: Upload
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: out.json
         path: ${{ runner.workspace }}/hpc-h5/out.json
