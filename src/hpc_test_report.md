@@ -1,8 +1,4 @@
-# HDF5 HPC Test Results
-
-This repository tracks HDF5 test results from major HPC systems (Frontier and Perlmutter) via CDash.
-
-## Latest Test Results
+# HDF5 Frontier & Perlmutter Test Results Report
 
 Generated on: 2025-09-25 14:35:53 UTC
 
