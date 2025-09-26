@@ -189,14 +189,15 @@ class CDashHPCParser:
         return parsed
 
     def _is_hpc_build(self, build_data: Dict[str, Any]) -> bool:
-        """Determine if a build is from frontier or perlmutter sites"""
+        """Determine if a build is from frontier, perlmutter, dane, corona, or tuolumne sites"""
         site_name = build_data.get('site', '').lower()
         build_name = build_data.get('build_name', '').lower()
 
         combined_text = f"{site_name} {build_name}"
 
-        # Check if frontier or perlmutter is present
-        return 'frontier' in combined_text or 'perlmutter' in combined_text
+        # Check if any HPC site is present
+        hpc_sites = ['frontier', 'perlmutter', 'dane', 'corona', 'tuolumne']
+        return any(site in combined_text for site in hpc_sites)
 
     def _generate_date_list(self) -> List[str]:
         """Generate list of dates to fetch data from (YYYY-MM-DD format)"""
@@ -248,7 +249,7 @@ class CDashHPCParser:
             else:
                 print(f"    No builds found for {date}")
 
-        print(f"Total found: {len(all_builds)} builds from frontier and perlmutter")
+        print(f"Total found: {len(all_builds)} builds from frontier, perlmutter, dane, corona, and tuolumne")
         return all_builds
 
     def _fetch_hpc_api_data(self, date: str = None) -> List[Dict[str, Any]]:
@@ -354,8 +355,8 @@ class CDashHPCParser:
         return builds
 
     def _create_sample_data(self) -> List[Dict[str, Any]]:
-        """Create sample data for frontier and perlmutter when real data isn't available"""
-        print("Using sample data for frontier and perlmutter - real data not accessible")
+        """Create sample data for HPC systems when real data isn't available"""
+        print("Using sample data for HPC systems - real data not accessible")
 
         sample_builds = [
             {
@@ -470,7 +471,7 @@ class CDashHPCParser:
         total_failed = df['test_failed'].sum()
         pass_rate = (total_passed / total_tests * 100) if total_tests > 0 else 0
 
-        report = f"""# HDF5 Frontier & Perlmutter Test Results Report
+        report = f"""# HDF5 HPC Test Results Report
 
 Generated on: {timestamp}
 
@@ -568,13 +569,13 @@ Generated on: {timestamp}
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")
         today = datetime.now().strftime("%Y-%m-%d")
 
-        return f"""# HDF5 Frontier & Perlmutter Test Results Report
+        return f"""# HDF5 HPC Test Results Report
 
 Generated on: {timestamp}
 
 ## No Test Results Found
 
-**Status**: No HDF5 test results were found for Frontier and Perlmutter HPC systems today ({today}).
+**Status**: No HDF5 test results were found for HPC systems (Frontier, Perlmutter, Dane, Corona, Tuolumne) today ({today}).
 
 ### Possible Reasons:
 - No builds were executed on the HPC systems today
