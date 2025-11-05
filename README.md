@@ -4,39 +4,37 @@ This repository tracks HDF5 test results from major HPC systems (Frontier and Pe
 
 ## Latest Test Results
 
-Generated on: 2025-11-04 06:21:31 UTC
+Generated on: 2025-11-05 06:21:11 UTC
 
 ## Summary
 
-- **Total HPC Builds**: 18
+- **Total HPC Builds**: 16
 - **Unique Sites**: 5
-- **Total Tests**: 60,323
-- **Tests Passed**: 60,314
-- **Tests Failed**: 9
-- **Pass Rate**: 99.99%
+- **Total Tests**: 30,059
+- **Tests Passed**: 30,053
+- **Tests Failed**: 6
+- **Pass Rate**: 99.98%
 
 ## Build Results
 
 | Site | Arch | OS | MPI | Compiler | Version | Configure | Build | Tests | Pass Rate |
 |------|------|----|-----|----------|---------|-----------|-------|-------|-----------|
-| corona | x86_64 | rh-8.10 | ompi-4.1.2 | clang-14.0 | 2.0.0-4 | ✅ | ✅ | 3321/3321 | 100.0% |
-| corona | x86_64 | rh-8.10 | ompi-4.1.2 | gcc-12.1 | 2.0.0-4 | ✅ | ✅ | 3317/3317 | 100.0% |
-| corona | x86_64 | rh-8.10 | ompi-4.1.2 | gcc-13.3 | 2.0.0-4 | ✅ | ✅ | 3317/3317 | 100.0% |
-| corona | x86_64 | rh-8.10 | ompi-4.1.2 | icx-2024.2 | 2.0.0-4 | ✅ | ✅ | 3057/3058 | 100.0% |
-| corona | x86_64 | rh-8.10 | ompi-4.1.2 | icx-2025.2 | 2.0.0-4 | ✅ | ✅ | 3057/3058 | 100.0% |
-| dane | x86_64 | rh-8.10 | ompi-4.1.2 | clang-14.0 | 2.0.0-4 | ✅ | ✅ | 3321/3322 | 100.0% |
-| dane | x86_64 | rh-8.10 | ompi-4.1.2 | gcc-12.1 | 2.0.0-4 | ✅ | ✅ | 3317/3318 | 100.0% |
-| dane | x86_64 | rh-8.10 | ompi-4.1.2 | gcc-13.3 | 2.0.0-4 | ✅ | ✅ | 3316/3318 | 99.9% |
-| frontier | x86_64 | suse-es-15-sp6 | cmpich-8.1.3... | cce-18.0 | 2.0.0-4 | ✅ | ✅ | 3456/3456 | 100.0% |
-| frontier | x86_64 | suse-es-15-sp6 | cmpich-8.1.3... | cce-19.0 | 2.0.0-4 | ✅ | ✅ | 3454/3456 | 99.9% |
-| frontier | x86_64 | suse-es-15-sp6 | cmpich-8.1.3... | gcc-14.2 | 2.0.0-4 | ✅ | ✅ | 3457/3457 | 100.0% |
-| perlmutter | x86_64 | suse-es-15-sp5 | cmpich-8.1.3... | aocc-4.1.0 | 2.0.0-4 | ✅ | ✅ | 3457/3457 | 100.0% |
-| perlmutter | x86_64 | suse-es-15-sp5 | cmpich-8.1.3... | cce-18.0.0 | 2.0.0-4 | ✅ | ✅ | 3456/3456 | 100.0% |
-| perlmutter | x86_64 | suse-es-15-sp5 | cmpich-8.1.3... | gcc-13.2.1 | 2.0.0-4 | ✅ | ✅ | 3457/3457 | 100.0% |
-| perlmutter | x86_64 | suse-es-15-sp5 | cmpich-8.1.3... | icx-2024.1.0 | 2.0.0-4 | ✅ | ✅ | 3458/3459 | 100.0% |
-| perlmutter | x86_64 | suse-es-15-sp5 | cmpich-8.1.3... | nvc-25.5-0 | 2.0.0-4 | ✅ | ✅ | 3456/3456 | 100.0% |
-| tuolumne | x86_64 | rh-8.10 | cmpich-9.0.1 | cce-20.0 | 2.0.0-4 | ✅ | ✅ | 3320/3320 | 100.0% |
-| tuolumne | x86_64 | rh-8.10 | cmpich-9.0.1 | gcc-13.3 | 2.0.0-4 | ✅ | ✅ | 3320/3320 | 100.0% |
+| corona | x86_64 | rh-8.10 | ompi-4.1.2 | clang-14.0 | 2.0.0-4 | ✅ | ✅ | 3325/3325 | 100.0% |
+| corona | x86_64 | rh-8.10 | ompi-4.1.2 | gcc-12.1 | 2.0.0-4 | ✅ | ✅ | 0/0 | 0.0% |
+| corona | x86_64 | rh-8.10 | ompi-4.1.2 | gcc-13.3 | 2.0.0-4 | ✅ | ✅ | 3321/3321 | 100.0% |
+| corona | x86_64 | rh-8.10 | ompi-4.1.2 | icx-2024.2 | 2.0.0-4 | ✅ | ✅ | 3061/3062 | 100.0% |
+| corona | x86_64 | rh-8.10 | ompi-4.1.2 | icx-2025.2 | 2.0.0-4 | ✅ | ✅ | 0/0 | 0.0% |
+| dane | x86_64 | rh-8.10 | ompi-4.1.2 | clang-14.0 | 2.0.0-4 | ✅ | ✅ | 3325/3326 | 100.0% |
+| dane | x86_64 | rh-8.10 | ompi-4.1.2 | gcc-12.1 | 2.0.0-4 | ✅ | ✅ | 3321/3322 | 100.0% |
+| dane | x86_64 | rh-8.10 | ompi-4.1.2 | gcc-13.3 | 2.0.0-4 | ✅ | ✅ | 3321/3322 | 100.0% |
+| frontier | x86_64 | suse-es-15-sp6 | cmpich-8.1.3... | cce-18.0 | 2.0.0-4 | ✅ | ✅ | 3460/3460 | 100.0% |
+| frontier | x86_64 | suse-es-15-sp6 | cmpich-8.1.3... | cce-19.0 | 2.0.0-4 | ✅ | ✅ | 3458/3460 | 99.9% |
+| frontier | x86_64 | suse-es-15-sp6 | cmpich-8.1.3... | gcc-14.2 | 2.0.0-4 | ✅ | ✅ | 3461/3461 | 100.0% |
+| perlmutter | x86_64 | suse-es-15-sp5 | cmpich-8.1.3... | aocc-4.1.0 | 2.0.0-4 | ✅ | ✅ | 0/0 | 0.0% |
+| perlmutter | x86_64 | suse-es-15-sp5 | cmpich-8.1.3... | cce-18.0.0 | 2.0.0-4 | ✅ | ✅ | 0/0 | 0.0% |
+| perlmutter | x86_64 | suse-es-15-sp5 | cmpich-8.1.3... | nvc-25.5-0 | 2.0.0-4 | ✅ | ✅ | 0/0 | 0.0% |
+| tuolumne | x86_64 | rh-8.10 | cmpich-9.0.1 | cce-20.0 | 2.0.0-4 | ✅ | ✅ | 0/0 | 0.0% |
+| tuolumne | x86_64 | rh-8.10 | cmpich-9.0.1 | gcc-13.3 | 2.0.0-4 | ✅ | ✅ | 0/0 | 0.0% |
 
 ## Detailed Statistics
 
@@ -47,16 +45,16 @@ Generated on: 2025-11-04 06:21:31 UTC
 - **Total Build Errors**: 0
 
 ### Test Statistics
-- **Tests Not Run**: 463
-- **Tests Failed**: 9
-- **Tests Passed**: 60314
+- **Tests Not Run**: 260
+- **Tests Failed**: 6
+- **Tests Passed**: 30053
 
 ### Compiler Performance
-1. **cce-18.0.0** (2.0.0-4, cmpich-8.1.30): 100.00% (3456 tests)
-2. **gcc-13.3** (2.0.0-4, cmpich-9.0.1): 100.00% (3320 tests)
-3. **gcc-13.3** (2.0.0-4, ompi-4.1.2): 100.00% (3317 tests)
-4. **cce-20.0** (2.0.0-4, cmpich-9.0.1): 100.00% (3320 tests)
-5. **aocc-4.1.0** (2.0.0-4, cmpich-8.1.30): 100.00% (3457 tests)
+1. **cce-18.0** (2.0.0-4, cmpich-8.1.31): 100.00% (3460 tests)
+2. **clang-14.0** (2.0.0-4, ompi-4.1.2): 100.00% (3325 tests)
+3. **gcc-14.2** (2.0.0-4, cmpich-8.1.31): 100.00% (3461 tests)
+4. **gcc-13.3** (2.0.0-4, ompi-4.1.2): 100.00% (3321 tests)
+5. **clang-14.0** (2.0.0-4, ompi-4.1.2): 99.97% (3326 tests)
 
 ---
-*Report generated by CDash HPC Parser on 2025-11-04 06:21:31 UTC*
+*Report generated by CDash HPC Parser on 2025-11-05 06:21:11 UTC*
