@@ -1,3 +1,5 @@
 timestamp,date,site,build_name,build_stamp,update_files,configure_warnings,configure_errors,build_errors,build_warnings,test_not_run,test_failed,test_passed,arch,os,mpi,compiler,version
-2026-01-23T06:24:36.708039,2026-01-22,frontier,x86_64/suse-es-15-sp6/cmpich-8.1.31/gcc-14.2/2.0.0,,0,0,0,0,0,0,0,0,x86_64,suse-es-15-sp6,cmpich-8.1.31,gcc-14.2,2.0.0
-2026-01-23T06:24:36.708055,2026-01-22,frontier,x86_64/suse-es-15-sp6/cmpich-8.1.31/cce-20.0/2.0.1,,0,0,0,0,0,10,0,3461,x86_64,suse-es-15-sp6,cmpich-8.1.31,cce-20.0,2.0.1
+2026-01-24T06:22:16.752689,2026-01-23,frontier,x86_64/suse-es-15-sp6/cmpich-9.0.1/cce-20.0/2.1.0,,0,0,0,0,0,10,0,3206,x86_64,suse-es-15-sp6,cmpich-9.0.1,cce-20.0,2.1.0
+2026-01-24T06:22:16.752701,2026-01-23,frontier,x86_64/suse-es-15-sp6/cmpich-9.0.1/cce-20.0/2.1.0,,0,0,0,0,0,10,0,3470,x86_64,suse-es-15-sp6,cmpich-9.0.1,cce-20.0,2.1.0
+2026-01-24T06:22:16.752711,2026-01-23,frontier,x86_64/suse-es-15-sp6/cmpich-9.0.1/cce-20.0/2.1.0,,0,0,0,0,0,10,0,3470,x86_64,suse-es-15-sp6,cmpich-9.0.1,cce-20.0,2.1.0
+2026-01-24T06:22:16.752722,2026-01-23,frontier,x86_64/suse-es-15-sp6/cmpich-9.0.1/cce-20.0/2.1.0,,0,0,0,0,0,0,0,0,x86_64,suse-es-15-sp6,cmpich-9.0.1,cce-20.0,2.1.0
